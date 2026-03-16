@@ -57,7 +57,7 @@ button {
 
 input:disabled {
     background-color: #e9ecef;
-    color: #6c757d;
+    color: #35383a;
     cursor: not-allowed;
 }
 
