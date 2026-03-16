@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caixa">
+    <h2>Buscador de CEP</h2>
+    
+    <input type="text" id="cep" placeholder="Apenas números">
+    <div class="botoes">
+    <button id="btn-buscar" onclick="buscarCep()">Buscar</button>
+    <button id="btn-limpar" onclick="limparCampos()">Limpar</button>
+    </div>
+
+    <div class="formulario-ckeckout">
+        <input type="text" id="rua" placeholder="Rua" disabled>
+        <input type="text" id="bairro" placeholder="Bairro" disabled>
+        <input type="text" id="cidade" placeholder="Cidade" disabled>
+        <input type="text" id="estado" placeholder="Estado" disabled>
+
+        <input type="text" id="numero" placeholder="Número da casa" disabled>
+        <input type="text" id="complemento" placeholder="Complemento (Opcional)" disabled>
+
+        <button id="btn-finalizar" onclick="finalizarPedido()" disabled>Finalizar Pedido</button>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+    <footer class="rodape-projeto">
+        <p>Projeto de Estudo: Integração com API ViaCEP para otimização de checkout.</p>
+        <p>Desenvolvido por: <strong>Rafael Laurindo dos Santos</strong> durante a graduação em Sistemas para Internet.</p>
+    </footer>
+</body>
+</html>
