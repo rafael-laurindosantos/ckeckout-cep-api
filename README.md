@@ -16,6 +16,11 @@ Com experiência prévia no setor de logística, entendo que o preenchimento man
 - **JavaScript (Vanilla):** Lógica de consumo de API assíncrona (Fetch API) e manipulação dinâmica do DOM.
 - **API ViaCEP:** Serviço de busca de dados postais.
 
+## Funcionalidades Extras
+- **Máscara de Input:** Formatação automática do CEP (inserção do hífen) em tempo real durante a digitação.
+- **Feedback Visual (UX):** Alteração dinâmica do botão para o estado "Buscando..." enquanto a API processa a resposta.
+- **Prevenção de Erros:** Trava de segurança no envio e alertas visuais caso o usuário digite um CEP inexistente.
+
 ## Responsividade
 O projeto foi totalmente otimizado para dispositivos móveis, garantindo que o formulário se ajuste perfeitamente a qualquer tamanho de tela, mantendo a legibilidade e facilidade de clique.
 
