@@ -1,8 +1,12 @@
 function buscarCep() {
     let cep =
-    document.getElementById('cep').value;
+    document.getElementById('cep').value.replace(/\D/g,'');
+    if (cep === "") {
+        return;
+    }
     let url = `https://viacep.com.br/ws/${cep}/json/`;
 
+    document.getElementById('btn-buscar').innerText = 'Buscando...';
     fetch(url)
         .then(function(resposta) {
             return resposta.json();
@@ -11,6 +15,7 @@ function buscarCep() {
             if (dados.erro) {
                 alert("CEP não encontrado!");
                 limparCampos();
+    document.getElementById('btn-buscar').innerText = 'Buscar';
                 return;
             }
 
@@ -25,10 +30,11 @@ function buscarCep() {
 
     document.getElementById('numero').focus();
 
-
+    document.getElementById('btn-buscar').innerText = 'Buscar';
         })
+        
         .catch(function(erro) {
-            alert("Erro na busca. Digite apenas números!");
+            alert("Erro na busca. Digite um CEP válido!");
             
         });
     }
@@ -66,4 +72,10 @@ function finalizarPedido () {
     alert(`Compra realizada com sucesso! \nO seu pedido será entregue em: ${rua}, nº ${numero}.`);
 
     limparCampos ();
+}
+
+function mascaraCEP(input) {
+    let cep = input.value.replace(/\D/g, '');
+    cep = cep.replace(/^(\d{5})(\d)/, '$1-$2');
+    input.value = cep;
 }
